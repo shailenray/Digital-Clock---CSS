@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.clkbody{
+    width: 370px;
+    height: 370px;
+    background: url(clock.png);
+    background-size: cover;
+    border: 5px solid #222;
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px #222,
+                inset 1px 1px 12px #222,
+                inset 1px 2px 16px #222,
+                      0 0 8px #222,
+                      1px 1px 10px #111;
+}
+
+.hHand{
+    width: 7px;
+    height: 70px;
+    background: #000;
+    border-radius: 25px;
+    box-shadow: 0 0 6px #777;
+    top: 267px;
+    left: 679px;
+    position: absolute;
+    animation: hHand 43200s linear infinite;
+    transform-origin: bottom;
+}
+
+@keyframes hHand{
+    0%{
+        transform: rotate(-360deg);
+    }
+}
+
+.mHand{
+    content: '';
+    width: 5px;
+    height: 85px;
+    background: #000;
+    border-radius: 25px;
+    box-shadow: 0 0 6px #777;
+    top: 251px;
+    left: 680px;
+    position: absolute;
+    animation: mHand 3600s linear infinite;
+    transform-origin: bottom;
+}
+
+@keyframes mHand{
+    0%{
+        transform: rotate(-360deg);
+    }
+}
+
+.sHand{
+    content: '';
+    width: 3px;
+    height: 100px;
+    background: #000;
+    border-radius: 25px;
+    box-shadow: 0 0 6px #777;
+    top: 235px;
+    left: 681px;
+    position: absolute;
+    animation: sHand 60s steps(60) infinite;
+    transform-origin: bottom;
+}
+
+@keyframes sHand{
+    0%{
+        transform: rotate(-360deg);
+    }
+}
+
+.clkHook{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #111;
+    background: #444;
+    box-shadow: 0 0 8px rgba(0,0,0,0.7),
+                0 0 7px rgba(0,0,0,0.3),
+          inset 0 0 8px rgba(0,0,0,0.7);
+    top: 324px;
+    left: 672px;
+    position: absolute;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
